@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/ObjA.js"></script>
+		<script type="text/javascript" src="js/ObjB.js"></script>
+		<script type="text/javascript">
+			console.clear();
+
+			var objA = new ObjA();
+			var objB = new ObjB();
+
+			//-- static variable
+			console.log('** static ObjA variable')
+			console.log(objA.Foo);
+
+			//-- static method
+			console.log('** static ObjA method')
+			console.log(objA);
+			objA.StaticFoo();
+
+			//-- class variable
+			console.log('** public ObjA variable')
+			console.log(objA.Foo);
+
+			//-- class method accessing public methods of another class
+			console.log('** public ObjB class method');
+			objB.Flush(objA);
+
+			//-- another static method
+			console.log('** static ObjB method');
+			objB.StaticFlush();
+		</script>
+	</head>
+
+	<body></body>
+</html>
