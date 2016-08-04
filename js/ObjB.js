@@ -1,9 +1,9 @@
 var ObjB = function() {
 	'use strict';
-	
+
 	//-- Private class variables/methods
 	function _flush() {
-		console.log('** private method');
+		console.log('** private ObjB method');
 		console.log('flushing from private');
 	}
 	

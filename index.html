@@ -5,7 +5,7 @@
 		<script type="text/javascript">
 			console.clear();
 
-			var objA = new ObjA();
+			var objA = new ObjA('class foo');
 			var objB = new ObjB();
 
 			//-- static variable
@@ -28,6 +28,16 @@
 			//-- another static method
 			console.log('** static ObjB method');
 			objB.StaticFlush();
+
+			//-- doesn't work
+			//-- objB._flush();
+
+			//-- undefined
+			console.log('** attempting to access private property');
+			console.log('objA._foo', objA._foo);
+
+			console.log('** attempting to access private property from public method');
+			console.log('objA.GetFoo', objA.GetFoo());
 		</script>
 	</head>
 
