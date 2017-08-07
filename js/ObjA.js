@@ -22,11 +22,12 @@ var ObjA = function(my_foo) {
 	};
 };
 
+
 //-- Static variable
 ObjA.prototype.Foo = 'static foo';
 
 //-- Static method, no access to private/public class variables/methods
-ObjA.prototype.StaticFoo = function() {
+ObjA.StaticFoo = function() {
 	//-- no access to _poo
 	var objA = new ObjA('class foo');
 	
